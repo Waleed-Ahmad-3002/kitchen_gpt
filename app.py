@@ -63,7 +63,7 @@ if "_load_request" in st.session_state or (os.path.exists("./final_model") and "
         if "model_state" in st.session_state:
             del st.session_state["model_state"]
 
-st.subheader("Input (use the same format your model expects)")
+st.subheader("Input")
 example_prompt = "TITLE: Cheesy Garlic Bread\nINGREDIENTS: bread; garlic; butter; salt\nDIRECTIONS:"
 prompt = st.text_area("Prompt", value=example_prompt, height=160, help="Enter the prompt exactly as during training.")
 col1, col2, col3 = st.columns([1,1,1])
