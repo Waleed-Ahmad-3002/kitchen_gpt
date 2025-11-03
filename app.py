@@ -15,8 +15,6 @@ PeftModel = import_peft()
 st.set_page_config(page_title="Model UI", layout="centered", initial_sidebar_state="auto")
 st.title("Model Playground")
 st.sidebar.header("Model configuration")
-st.sidebar.write("- merged model folder (full weights + tokenizer) OR")
-st.sidebar.write("- base model (HF id or local folder) plus a LoRA adapter folder")
 base_model_path = st.sidebar.text_input("Base model path (local folder or HF id)", value="gpt2")
 lora_adapter_path = st.sidebar.text_input("LoRA adapter path (folder containing adapter_model.safetensors)", value="./kitchen_gpt_lora_epoch2")
 use_gpu_hint = "GPU available" if torch.cuda.is_available() else "GPU not available (CPU inference)"
